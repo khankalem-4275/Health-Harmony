@@ -9,7 +9,7 @@ const path = require("path");
 const notificationRouter = require("./routes/notificationRouter");
 
 const app = express();
-const port = process.env.PORT || 4000;
+const PORT = process.env.PORT || 4000;
 
 app.use(cors());
 app.use(express.json());
@@ -23,4 +23,4 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
-app.listen(port, () => {});
+app.listen(PORT, () => {});
